@@ -11,6 +11,8 @@ import java.util.concurrent.TimeUnit;
 /** @ClassName: TokenCache @Description: Token @Author @Date 2021/2/11 @Version 1.0 */
 public class TokenCache {
   private static Logger logger = LoggerFactory.getLogger(TokenCache.class);
+  public static final String TOKEN_PREFIX = "token_";
+  
   private static LoadingCache<String, String> localCache =
       CacheBuilder.newBuilder()
           .initialCapacity(1000)
