@@ -40,7 +40,7 @@ public class UserServiceImpl implements IUserService {
       return ServerResponse.createByErrorMessage("密码错误");
     }
     user.setPassword(StringUtils.EMPTY);
-    return ServerResponse.createBySuccessMessage("登录成功");
+    return ServerResponse.createBySuccess("登录成功", user);
   }
   
   public ServerResponse<String> register(User user) {
